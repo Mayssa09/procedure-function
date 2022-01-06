@@ -1,0 +1,22 @@
+ALGORITHM algorithm_name
+VAR
+    set_declarations
+BEGIN
+    FUNCTION orthogonal (n,V1,V2) : STRING
+    VAR
+        n : INTEGER ;
+        V1 : ARRAY_OF INTEGER[3];
+        V2 : ARRAY_OF INTEGER[3];
+    BEGIN 
+    FOR i FROM 0 TO 2 STEP 1  DO
+        IF (dot_product(V1 , V2) = 0) THEN
+             RETURN "orthogonal"
+        ELSE
+            RETURN "non-orthogonal"
+        END_IF     
+
+    END_FOR
+        
+        
+    END
+END
